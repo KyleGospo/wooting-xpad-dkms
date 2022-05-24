@@ -1,6 +1,27 @@
 --- xpad.c
 +++ xpad.c
-@@ -419,6 +419,7 @@
+@@ -113,6 +113,8 @@
+ 	u8 xtype;
+ } xpad_device[] = {
+ 	{ 0x0079, 0x18d4, "GPD Win 2 X-Box Controller", 0, XTYPE_XBOX360 },
++	{ 0x03eb, 0xff01, "Wooting One (Legacy)", 0, XTYPE_XBOX360 },
++	{ 0x03eb, 0xff02, "Wooting Two (Legacy)", 0, XTYPE_XBOX360 },
+ 	{ 0x044f, 0x0f00, "Thrustmaster Wheel", 0, XTYPE_XBOX },
+ 	{ 0x044f, 0x0f03, "Thrustmaster Wheel", 0, XTYPE_XBOX },
+ 	{ 0x044f, 0x0f07, "Thrustmaster, Inc. Controller", 0, XTYPE_XBOX },
+@@ -334,6 +336,11 @@
+ 	{ 0x24c6, 0x5b03, "Thrustmaster Ferrari 458 Racing Wheel", 0, XTYPE_XBOX360 },
+ 	{ 0x24c6, 0x5d04, "Razer Sabertooth", 0, XTYPE_XBOX360 },
+ 	{ 0x24c6, 0xfafe, "Rock Candy Gamepad for Xbox 360", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1100, "Wooting One", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1200, "Wooting Two", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1210, "Wooting Lekker", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1220, "Wooting Two HE", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1300, "Wooting 60HE", 0, XTYPE_XBOX360 },
+ 	{ 0x3285, 0x0607, "Nacon GC-100", 0, XTYPE_XBOX360 },
+ 	{ 0x3767, 0x0101, "Fanatec Speedster 3 Forceshock Wheel", 0, XTYPE_XBOX },
+ 	{ 0xffff, 0xffff, "Chinese-made Xbox Controller", 0, XTYPE_XBOX },
+@@ -419,6 +426,7 @@
  static const struct usb_device_id xpad_table[] = {
  	{ USB_INTERFACE_INFO('X', 'B', 0) },	/* X-Box USB-IF not approved class */
  	XPAD_XBOX360_VENDOR(0x0079),		/* GPD Win 2 Controller */
@@ -8,7 +29,7 @@
  	XPAD_XBOX360_VENDOR(0x044f),		/* Thrustmaster X-Box 360 controllers */
  	XPAD_XBOX360_VENDOR(0x045e),		/* Microsoft X-Box 360 controllers */
  	XPAD_XBOXONE_VENDOR(0x045e),		/* Microsoft X-Box One controllers */
-@@ -452,6 +453,7 @@
+@@ -452,6 +460,7 @@
  	XPAD_XBOXONE_VENDOR(0x24c6),		/* PowerA Controllers */
  	XPAD_XBOXONE_VENDOR(0x2e24),		/* Hyperkin Duke X-Box One pad */
  	XPAD_XBOX360_VENDOR(0x2f24),		/* GameSir Controllers */
