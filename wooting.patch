@@ -1,0 +1,32 @@
+--- xpad.c
++++ xpad.c
+@@ -337,6 +337,21 @@
+ 	{ 0x3285, 0x0607, "Nacon GC-100", 0, XTYPE_XBOX360 },
+ 	{ 0x3767, 0x0101, "Fanatec Speedster 3 Forceshock Wheel", 0, XTYPE_XBOX },
+ 	{ 0xffff, 0xffff, "Chinese-made Xbox Controller", 0, XTYPE_XBOX },
++	{ 0x31e3, 0x1100, "Wooting One", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1101, "Wooting One Alt-gamepad mode", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1102, "Wooting One 2nd Alt-gamepad mode", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1200, "Wooting Two", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1201, "Wooting Two Alt-gamepad mode", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1202, "Wooting Two 2nd Alt-gamepad mode", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1210, "Wooting Lekker", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1211, "Wooting Lekker Alt-gamepad mode", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1212, "Wooting Lekker 2nd Alt-gamepad mode", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1220, "Wooting Two HE", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1221, "Wooting Two HE Alt-gamepad mode", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1222, "Wooting Two HE 2nd Alt-gamepad mode", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1300, "Wooting 60HE", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1301, "Wooting 60HE Alt-gamepad mode", 0, XTYPE_XBOX360 },
++	{ 0x31e3, 0x1302, "Wooting 60HE 2nd Alt-gamepad mode", 0, XTYPE_XBOX360 },
+ 	{ 0x0000, 0x0000, "Generic X-Box pad", 0, XTYPE_UNKNOWN }
+ };
+ 
+@@ -453,6 +468,7 @@
+ 	XPAD_XBOXONE_VENDOR(0x2e24),		/* Hyperkin Duke X-Box One pad */
+ 	XPAD_XBOX360_VENDOR(0x2f24),		/* GameSir Controllers */
+ 	XPAD_XBOX360_VENDOR(0x3285),		/* Nacon GC-100 */
++	XPAD_XBOX360_VENDOR(0x31e3),		/* Wooting Keyboards */
+ 	{ }
+ };
+ 
