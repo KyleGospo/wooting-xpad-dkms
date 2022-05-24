@@ -37,11 +37,6 @@ cp %{SOURCE0} %{SOURCE1} %{SOURCE2} .
 mkdir -p %{buildroot}%{_usrsrc}/%{dkms_name}-%{version}/
 cp -fr * %{buildroot}%{_usrsrc}/%{dkms_name}-%{version}/
 
-install -d %{buildroot}%{_sysconfdir}/modules-load.d
-cat > %{buildroot}%{_sysconfdir}/modules-load.d/wooting.conf << EOF
-xpad
-EOF
-
 %post
 dkms add -m %{dkms_name} -v %{version} -q || :
 # Rebuild and make available for the currently running kernel
@@ -54,4 +49,3 @@ dkms remove -m %{dkms_name} -v %{version} -q --all || :
 
 %files
 %{_usrsrc}/%{dkms_name}-%{version}
-%{_sysconfdir}/modules-load.d/wooting.conf
