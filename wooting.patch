@@ -1,9 +1,11 @@
 --- xpad.c
 +++ xpad.c
-@@ -337,6 +337,21 @@
+@@ -337,6 +337,23 @@
  	{ 0x3285, 0x0607, "Nacon GC-100", 0, XTYPE_XBOX360 },
  	{ 0x3767, 0x0101, "Fanatec Speedster 3 Forceshock Wheel", 0, XTYPE_XBOX },
  	{ 0xffff, 0xffff, "Chinese-made Xbox Controller", 0, XTYPE_XBOX },
++	{ 0x03eb, 0xff01, "Wooting One Legacy", 0, XTYPE_XBOX360 },
++	{ 0x03eb, 0xff02, "Wooting Two Legacy", 0, XTYPE_XBOX360 },
 +	{ 0x31e3, 0x1100, "Wooting One", 0, XTYPE_XBOX360 },
 +	{ 0x31e3, 0x1101, "Wooting One Alt-gamepad mode", 0, XTYPE_XBOX360 },
 +	{ 0x31e3, 0x1102, "Wooting One 2nd Alt-gamepad mode", 0, XTYPE_XBOX360 },
@@ -22,10 +24,11 @@
  	{ 0x0000, 0x0000, "Generic X-Box pad", 0, XTYPE_UNKNOWN }
  };
  
-@@ -453,6 +468,7 @@
+@@ -453,6 +470,8 @@
  	XPAD_XBOXONE_VENDOR(0x2e24),		/* Hyperkin Duke X-Box One pad */
  	XPAD_XBOX360_VENDOR(0x2f24),		/* GameSir Controllers */
  	XPAD_XBOX360_VENDOR(0x3285),		/* Nacon GC-100 */
++	XPAD_XBOX360_VENDOR(0x03eb),		/* Wooting Legacy Keyboards */
 +	XPAD_XBOX360_VENDOR(0x31e3),		/* Wooting Keyboards */
  	{ }
  };
