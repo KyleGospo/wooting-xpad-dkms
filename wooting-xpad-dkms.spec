@@ -8,6 +8,7 @@ Release:    1%{?dist}
 Summary:    xpad driver patched for Wooting keyboard support
 License:    GPLv2+
 URL:        https://github.com/KyleGospo/wooting-xpad-dkms
+BuildArch:  noarch
 
 # Source file:
 # https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/drivers/input/joystick/xpad.c
