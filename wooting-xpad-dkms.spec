@@ -15,6 +15,8 @@ BuildArch:  noarch
 Source0:    https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/drivers/input/joystick/xpad.c?h=v%{kernel_version}#/xpad.c
 Source1:    Makefile
 Source2:    dkms.conf
+Source3:    README.md
+Source4:    LICENSE
 
 # Wooting Keyboard patch:
 Patch0:     wooting.patch
@@ -28,7 +30,7 @@ xpad driver from kernel %{kernel_version} patched with support for Wooting analo
 
 %prep
 %setup -q -T -c -n %{name}-%{version}
-cp %{SOURCE0} %{SOURCE1} %{SOURCE2} .
+cp %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} .
 %patch0 -p0
 
 %build
@@ -49,6 +51,8 @@ dkms install -m %{dkms_name} -v %{version} -q --force || :
 dkms remove -m %{dkms_name} -v %{version} -q --all || :
 
 %files
+%license LICENSE
+%doc README.md
 %{_usrsrc}/%{dkms_name}-%{version}
 
 # Finally, changes from the latest release of your application are generated from
